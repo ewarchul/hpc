@@ -16,11 +16,11 @@ int main(int argc, char *argv[]) {
     printf("process %d received token %d from process %d\n", worldRank, token,
            worldRank - 1);
   } else {
-    token = 2;
+    token = 1;
   }
 
   if (worldRank != 0) {
-    token = token * 2;
+    token = token + worldRank;
     MPI_Send(&token, 1, MPI_INT, (worldRank + 1) % worldSize, 0,
              MPI_COMM_WORLD);
   } else {
