@@ -1,10 +1,11 @@
 #include <mpi.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <stdint.h>
 
 
 int main(int argc, char *argv[]) {
-  int token;
+  int64_t token;
   MPI_Init(&argc, &argv);
   int worldSize;
   MPI_Comm_size(MPI_COMM_WORLD, &worldSize);
@@ -13,7 +14,7 @@ int main(int argc, char *argv[]) {
   if (worldRank != 0) {
     MPI_Recv(&token, 1, MPI_INT, worldRank - 1, 0, MPI_COMM_WORLD,
              MPI_STATUS_IGNORE);
-    printf("process %d received token %d from process %d\n", worldRank, token,
+    printf("process %d received token %ld from process %d\n", worldRank, token,
            worldRank - 1);
   } else {
     token = 1;
@@ -33,7 +34,7 @@ int main(int argc, char *argv[]) {
   if (worldRank == 0) {
     MPI_Recv(&token, 1, MPI_INT, worldSize - 1, 0, MPI_COMM_WORLD,
              MPI_STATUS_IGNORE);
-    printf("process %d received token %d from process %d\n", worldRank,
+    printf("process %d received token %ld from process %d\n", worldRank,
            token, worldSize - 1);
   }
 
