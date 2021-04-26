@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
   }
 
   if (worldRank != 0) {
-    token = token + worldRank;
+    token = token * worldRank;
     MPI_Send(&token, 1, MPI_INT, (worldRank + 1) % worldSize, 0,
              MPI_COMM_WORLD);
   } else {
