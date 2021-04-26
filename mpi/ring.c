@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
     MPI_Recv(&token, 1, MPI_INT, procId - 1, 0, comm, MPI_STATUS_IGNORE);
     printf("[P_%d -> P_%d]:%lld\n", procId - 1, procId, token);
   } else {
-    token = 1;
+    token = 12;
   }
 
   if (procId != 0) {
