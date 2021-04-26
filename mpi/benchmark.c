@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
     double endTime = MPI_Wtime();
     if (procId == 0) {
       double executionTime = endTime - startTime;
-      FILE *logFile = fopen("benchmark.csv", "a");
+      FILE *logFile = fopen("benchmark-okeanos.csv", "a");
       fprintf(logFile, "%d,%d,%f\n", exp_, messageSize, executionTime);
       fclose(logFile);
     }
