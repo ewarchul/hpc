@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
 
   long long int token = 0;
   if (procId != 0) {
-    MPI_Recv(&token, 1, MPI_INT, procId - 1, 0, comm, MPI_STATUS_IGNORE);
+    MPI_Recv(&token, 1, MPI_LONG_LONG_INT, procId - 1, 0, comm, MPI_STATUS_IGNORE);
     printf("[P_%d -> P_%d]:%lld\n", procId - 1, procId, token);
   } else {
     token = 1;
@@ -22,13 +22,13 @@ int main(int argc, char *argv[]) {
 
   if (procId != 0) {
     token = token * procId;
-    MPI_Send(&token, 1, MPI_INT, (procId + 1) % procNumber, 0, comm);
+    MPI_Send(&token, 1, MPI_LONG_LONG_INT, (procId + 1) % procNumber, 0, comm);
   } else {
     MPI_Send(&token, 1, MPI_INT, (procId + 1) % procNumber, 0, comm);
   }
 
   if (procId == 0) {
-    MPI_Recv(&token, 1, MPI_INT, procNumber - 1, 0, comm, MPI_STATUS_IGNORE);
+    MPI_Recv(&token, 1, MPI_LONG_LONG_INT, procNumber - 1, 0, comm, MPI_STATUS_IGNORE);
     printf("[P_%d -> P_%d]:%lld\n", procNumber - 1, procId, token);
   }
 
