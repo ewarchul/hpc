@@ -1,39 +1,35 @@
 #include <mpi.h>
-#include <unistd.h>
-#include <stdio.h>
 #include <stdint.h>
-
+#include <stdio.h>
+#include <unistd.h>
 
 int main(int argc, char *argv[]) {
-  unsigned long long token;
   MPI_Init(&argc, &argv);
-  int worldSize;
-  MPI_Comm_size(MPI_COMM_WORLD, &worldSize);
-  int worldRank;
-  MPI_Comm_rank(MPI_COMM_WORLD, &worldRank);
-  if (worldRank != 0) {
-    MPI_Recv(&token, 1, MPI_INT, worldRank - 1, 0, MPI_COMM_WORLD,
-             MPI_STATUS_IGNORE);
-    printf("process %d received token %lli from process %d\n", worldRank, token,
-           worldRank - 1);
+  MPI_Comm comm = MPI_COMM_WORLD;
+
+  int procNumber;
+  MPI_Comm_size(comm, &procNumber);
+  int procId;
+  MPI_Comm_rank(comm, &procId);
+
+  long long int token = 0;
+  if (procId != 0) {
+    MPI_Recv(&token, 1, MPI_INT, procId - 1, 0, comm, MPI_STATUS_IGNORE);
+    printf("[P_%d -> P_%d]:%lld\n", procId - 1, procId, token);
   } else {
     token = 1;
   }
 
-  if (worldRank != 0) {
-    token = token * worldRank;
-    MPI_Send(&token, 1, MPI_INT, (worldRank + 1) % worldSize, 0,
-             MPI_COMM_WORLD);
+  if (procId != 0) {
+    token = token * procId;
+    MPI_Send(&token, 1, MPI_INT, (procId + 1) % procNumber, 0, comm);
   } else {
-    MPI_Send(&token, 1, MPI_INT, (worldRank + 1) % worldSize, 0,
-             MPI_COMM_WORLD);
+    MPI_Send(&token, 1, MPI_INT, (procId + 1) % procNumber, 0, comm);
   }
 
-  if (worldRank == 0) {
-    MPI_Recv(&token, 1, MPI_INT, worldSize - 1, 0, MPI_COMM_WORLD,
-             MPI_STATUS_IGNORE);
-    printf("process %d received token %lli from process %d\n", worldRank,
-           token, worldSize - 1);
+  if (procId == 0) {
+    MPI_Recv(&token, 1, MPI_INT, procNumber - 1, 0, comm, MPI_STATUS_IGNORE);
+    printf("[P_%d -> P_%d]:%lld\n", procNumber - 1, procId, token);
   }
 
   MPI_Finalize();

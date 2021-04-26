@@ -1,0 +1,152 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALL_CCFLAGS	cuda/raytrace/Makefile	/^ALL_CCFLAGS :=$/;"	m
+ALL_CCFLAGS	cuda/texture/Makefile	/^ALL_CCFLAGS :=$/;"	m
+ALL_LDFLAGS	cuda/raytrace/Makefile	/^ALL_LDFLAGS :=$/;"	m
+ALL_LDFLAGS	cuda/texture/Makefile	/^ALL_LDFLAGS :=$/;"	m
+BUILD_TYPE	cuda/raytrace/Makefile	/^      BUILD_TYPE := debug$/;"	m
+BUILD_TYPE	cuda/raytrace/Makefile	/^      BUILD_TYPE := release$/;"	m
+BUILD_TYPE	cuda/texture/Makefile	/^      BUILD_TYPE := debug$/;"	m
+BUILD_TYPE	cuda/texture/Makefile	/^      BUILD_TYPE := release$/;"	m
+CCFLAGS	cuda/raytrace/Makefile	/^CCFLAGS     :=$/;"	m
+CCFLAGS	cuda/texture/Makefile	/^CCFLAGS     :=$/;"	m
+CPUAnimBitmap	cuda/texture/common/cpu_anim.h	/^  CPUAnimBitmap( int w, int h, void *d = NULL) {$/;"	f	struct:CPUAnimBitmap
+CPUAnimBitmap	cuda/texture/common/cpu_anim.h	/^struct CPUAnimBitmap {$/;"	s
+CPUBitmap	cuda/common/cpu_bitmap.h	/^	CPUBitmap(int width, int height, void *d = NULL) {$/;"	f	struct:CPUBitmap
+CPUBitmap	cuda/common/cpu_bitmap.h	/^struct CPUBitmap {$/;"	s
+CPUBitmap	cuda/raytrace/common/cpu_bitmap.h	/^	CPUBitmap(int width, int height, void *d = NULL) {$/;"	f	struct:CPUBitmap
+CPUBitmap	cuda/raytrace/common/cpu_bitmap.h	/^struct CPUBitmap {$/;"	s
+CUDA_PATH	cuda/raytrace/Makefile	/^CUDA_PATH ?= "\/usr\/local\/cuda"$/;"	m
+CUDA_PATH	cuda/texture/Makefile	/^CUDA_PATH ?= "\/usr\/local\/cuda"$/;"	m
+Draw	cuda/texture/common/cpu_anim.h	/^  static void Draw( void ) {$/;"	f	struct:CPUAnimBitmap
+EXEC	cuda/raytrace/Makefile	/^EXEC ?= @echo "[@]"$/;"	m
+EXEC	cuda/texture/Makefile	/^EXEC ?= @echo "[@]"$/;"	m
+GCCVERSIONLTEQ46	cuda/raytrace/Makefile	/^            GCCVERSIONLTEQ46 := $(shell expr `$(HOST_COMPILER) -dumpversion` \\<= 4.6)$/;"	m
+GCCVERSIONLTEQ46	cuda/texture/Makefile	/^            GCCVERSIONLTEQ46 := $(shell expr `$(HOST_COMPILER) -dumpversion` \\<= 4.6)$/;"	m
+HANDLE_ERROR	cuda/common/errors.h	15;"	d
+HANDLE_ERROR	cuda/raytrace/common/errors.h	15;"	d
+HANDLE_ERROR	cuda/reduction/common/errors.h	15;"	d
+HANDLE_ERROR	cuda/texture/common/errors.h	31;"	d
+HIGHEST_SM	cuda/raytrace/Makefile	/^HIGHEST_SM := $(lastword $(sort $(SMS)))$/;"	m
+HIGHEST_SM	cuda/texture/Makefile	/^HIGHEST_SM := $(lastword $(sort $(SMS)))$/;"	m
+HOST_ARCH	cuda/raytrace/Makefile	/^HOST_ARCH   := $(shell uname -m)$/;"	m
+HOST_ARCH	cuda/texture/Makefile	/^HOST_ARCH   := $(shell uname -m)$/;"	m
+HOST_COMPILER	cuda/raytrace/Makefile	/^            HOST_COMPILER ?= $(QNX_HOST)\/usr\/bin\/aarch64-unknown-nto-qnx7.0.0-g++$/;"	m
+HOST_COMPILER	cuda/raytrace/Makefile	/^            HOST_COMPILER ?= $(QNX_HOST)\/usr\/bin\/arm-unknown-nto-qnx6.6.0eabi-g++$/;"	m
+HOST_COMPILER	cuda/raytrace/Makefile	/^            HOST_COMPILER ?= aarch64-linux-android-g++$/;"	m
+HOST_COMPILER	cuda/raytrace/Makefile	/^            HOST_COMPILER ?= aarch64-linux-gnu-g++$/;"	m
+HOST_COMPILER	cuda/raytrace/Makefile	/^            HOST_COMPILER ?= arm-linux-androideabi-g++$/;"	m
+HOST_COMPILER	cuda/raytrace/Makefile	/^            HOST_COMPILER ?= arm-linux-gnueabihf-g++$/;"	m
+HOST_COMPILER	cuda/raytrace/Makefile	/^        HOST_COMPILER ?= clang++$/;"	m
+HOST_COMPILER	cuda/raytrace/Makefile	/^        HOST_COMPILER ?= powerpc64le-linux-gnu-g++$/;"	m
+HOST_COMPILER	cuda/raytrace/Makefile	/^    HOST_COMPILER ?= $(GCC)$/;"	m
+HOST_COMPILER	cuda/raytrace/Makefile	/^HOST_COMPILER ?= g++$/;"	m
+HOST_COMPILER	cuda/texture/Makefile	/^            HOST_COMPILER ?= $(QNX_HOST)\/usr\/bin\/aarch64-unknown-nto-qnx7.0.0-g++$/;"	m
+HOST_COMPILER	cuda/texture/Makefile	/^            HOST_COMPILER ?= $(QNX_HOST)\/usr\/bin\/arm-unknown-nto-qnx6.6.0eabi-g++$/;"	m
+HOST_COMPILER	cuda/texture/Makefile	/^            HOST_COMPILER ?= aarch64-linux-android-g++$/;"	m
+HOST_COMPILER	cuda/texture/Makefile	/^            HOST_COMPILER ?= aarch64-linux-gnu-g++$/;"	m
+HOST_COMPILER	cuda/texture/Makefile	/^            HOST_COMPILER ?= arm-linux-androideabi-g++$/;"	m
+HOST_COMPILER	cuda/texture/Makefile	/^            HOST_COMPILER ?= arm-linux-gnueabihf-g++$/;"	m
+HOST_COMPILER	cuda/texture/Makefile	/^        HOST_COMPILER ?= clang++$/;"	m
+HOST_COMPILER	cuda/texture/Makefile	/^        HOST_COMPILER ?= powerpc64le-linux-gnu-g++$/;"	m
+HOST_COMPILER	cuda/texture/Makefile	/^    HOST_COMPILER ?= $(GCC)$/;"	m
+HOST_COMPILER	cuda/texture/Makefile	/^HOST_COMPILER ?= g++$/;"	m
+HOST_OS	cuda/raytrace/Makefile	/^HOST_OS   := $(shell uname -s 2>\/dev\/null | tr "[:upper:]" "[:lower:]")$/;"	m
+HOST_OS	cuda/texture/Makefile	/^HOST_OS   := $(shell uname -s 2>\/dev\/null | tr "[:upper:]" "[:lower:]")$/;"	m
+HandleError	cuda/common/errors.h	/^static void HandleError(cudaError_t err,$/;"	f
+HandleError	cuda/raytrace/common/errors.h	/^static void HandleError(cudaError_t err,$/;"	f
+HandleError	cuda/reduction/common/errors.h	/^static void HandleError(cudaError_t err,$/;"	f
+HandleError	cuda/texture/common/errors.h	/^static void HandleError(cudaError_t err,$/;"	f
+INCLUDES	cuda/raytrace/Makefile	/^INCLUDES  := -I..\/..\/common\/inc$/;"	m
+INCLUDES	cuda/texture/Makefile	/^INCLUDES  := -I..\/..\/common\/inc$/;"	m
+Key	cuda/texture/common/cpu_anim.h	/^  static void Key(unsigned char key, int x, int y) {$/;"	f	struct:CPUAnimBitmap
+LDFLAGS	cuda/raytrace/Makefile	/^LDFLAGS     := $/;"	m
+LDFLAGS	cuda/texture/Makefile	/^LDFLAGS     := -lglut -lGLU -lGL$/;"	m
+LIBRARIES	cuda/raytrace/Makefile	/^LIBRARIES :=$/;"	m
+LIBRARIES	cuda/texture/Makefile	/^LIBRARIES :=$/;"	m
+NVCC	cuda/raytrace/Makefile	/^NVCC          := $(CUDA_PATH)\/bin\/nvcc -ccbin $(HOST_COMPILER)$/;"	m
+NVCC	cuda/texture/Makefile	/^NVCC          := $(CUDA_PATH)\/bin\/nvcc -ccbin $(HOST_COMPILER)$/;"	m
+NVCCFLAGS	cuda/raytrace/Makefile	/^NVCCFLAGS   := -m${TARGET_SIZE}$/;"	m
+NVCCFLAGS	cuda/texture/Makefile	/^NVCCFLAGS   := -m${TARGET_SIZE}$/;"	m
+SAMPLE_ENABLED	cuda/raytrace/Makefile	/^SAMPLE_ENABLED := 0$/;"	m
+SAMPLE_ENABLED	cuda/raytrace/Makefile	/^SAMPLE_ENABLED := 1$/;"	m
+SAMPLE_ENABLED	cuda/texture/Makefile	/^SAMPLE_ENABLED := 0$/;"	m
+SAMPLE_ENABLED	cuda/texture/Makefile	/^SAMPLE_ENABLED := 1$/;"	m
+SMS	cuda/raytrace/Makefile	/^SMS ?= 50 52 60 70$/;"	m
+SMS	cuda/texture/Makefile	/^SMS ?= 30 35 37 50 52 60$/;"	m
+TARGET_ARCH	cuda/raytrace/Makefile	/^    TARGET_ARCH = armv7l$/;"	m
+TARGET_ARCH	cuda/raytrace/Makefile	/^    TARGET_ARCH ?= aarch64$/;"	m
+TARGET_ARCH	cuda/raytrace/Makefile	/^    TARGET_ARCH ?= armv7l$/;"	m
+TARGET_ARCH	cuda/raytrace/Makefile	/^    TARGET_ARCH ?= ppc64le$/;"	m
+TARGET_ARCH	cuda/raytrace/Makefile	/^    TARGET_ARCH ?= x86_64$/;"	m
+TARGET_ARCH	cuda/raytrace/Makefile	/^TARGET_ARCH ?= $(HOST_ARCH)$/;"	m
+TARGET_ARCH	cuda/texture/Makefile	/^    TARGET_ARCH = armv7l$/;"	m
+TARGET_ARCH	cuda/texture/Makefile	/^    TARGET_ARCH ?= aarch64$/;"	m
+TARGET_ARCH	cuda/texture/Makefile	/^    TARGET_ARCH ?= armv7l$/;"	m
+TARGET_ARCH	cuda/texture/Makefile	/^    TARGET_ARCH ?= ppc64le$/;"	m
+TARGET_ARCH	cuda/texture/Makefile	/^    TARGET_ARCH ?= x86_64$/;"	m
+TARGET_ARCH	cuda/texture/Makefile	/^TARGET_ARCH ?= $(HOST_ARCH)$/;"	m
+TARGET_OS	cuda/raytrace/Makefile	/^TARGET_OS ?= $(HOST_OS)$/;"	m
+TARGET_OS	cuda/texture/Makefile	/^TARGET_OS ?= $(HOST_OS)$/;"	m
+TARGET_SIZE	cuda/raytrace/Makefile	/^            TARGET_SIZE := 32$/;"	m
+TARGET_SIZE	cuda/raytrace/Makefile	/^            TARGET_SIZE := 64$/;"	m
+TARGET_SIZE	cuda/raytrace/Makefile	/^        TARGET_SIZE := $(shell getconf LONG_BIT)$/;"	m
+TARGET_SIZE	cuda/texture/Makefile	/^            TARGET_SIZE := 32$/;"	m
+TARGET_SIZE	cuda/texture/Makefile	/^            TARGET_SIZE := 64$/;"	m
+TARGET_SIZE	cuda/texture/Makefile	/^        TARGET_SIZE := $(shell getconf LONG_BIT)$/;"	m
+__ANIM_COLOR_H__	cuda/texture/common/anim_color.h	18;"	d
+__CPU_ANIM_H__	cuda/texture/common/cpu_anim.h	19;"	d
+__CPU_BITMAP_H__	cuda/common/cpu_bitmap.h	2;"	d
+__CPU_BITMAP_H__	cuda/raytrace/common/cpu_bitmap.h	2;"	d
+__ERRORS_H__	cuda/common/errors.h	2;"	d
+__ERRORS_H__	cuda/raytrace/common/errors.h	2;"	d
+__ERRORS_H__	cuda/reduction/common/errors.h	2;"	d
+__ERRORS_H__	cuda/texture/common/errors.h	18;"	d
+animExit	cuda/texture/common/cpu_anim.h	/^  void (*animExit)(void*);$/;"	m	struct:CPUAnimBitmap
+anim_and_exit	cuda/texture/common/cpu_anim.h	/^  void anim_and_exit(void (*f)(void*,int), void(*e)(void*) ) {$/;"	f	struct:CPUAnimBitmap
+bitmapExit	cuda/common/cpu_bitmap.h	/^	void (*bitmapExit)(void *);$/;"	m	struct:CPUBitmap
+bitmapExit	cuda/raytrace/common/cpu_bitmap.h	/^	void (*bitmapExit)(void *);$/;"	m	struct:CPUBitmap
+clickDrag	cuda/texture/common/cpu_anim.h	/^  void (*clickDrag)(void*,int,int,int,int);$/;"	m	struct:CPUAnimBitmap
+click_drag	cuda/texture/common/cpu_anim.h	/^  void click_drag( void (*f)(void*, int, int, int, int) ) {$/;"	f	struct:CPUAnimBitmap
+dataBlock	cuda/common/cpu_bitmap.h	/^	void          *dataBlock;$/;"	m	struct:CPUBitmap
+dataBlock	cuda/raytrace/common/cpu_bitmap.h	/^	void          *dataBlock;$/;"	m	struct:CPUBitmap
+dataBlock	cuda/texture/common/cpu_anim.h	/^  void          *dataBlock;$/;"	m	struct:CPUAnimBitmap
+dragStartX	cuda/texture/common/cpu_anim.h	/^  int  dragStartX, dragStartY;$/;"	m	struct:CPUAnimBitmap
+dragStartY	cuda/texture/common/cpu_anim.h	/^  int  dragStartX, dragStartY;$/;"	m	struct:CPUAnimBitmap
+dump_ppm	cuda/common/cpu_bitmap.h	/^	void dump_ppm(const char *fname) {$/;"	f	struct:CPUBitmap
+dump_ppm	cuda/raytrace/common/cpu_bitmap.h	/^	void dump_ppm(const char *fname) {$/;"	f	struct:CPUBitmap
+fAnim	cuda/texture/common/cpu_anim.h	/^  void (*fAnim)(void*,int);$/;"	m	struct:CPUAnimBitmap
+float_to_color	cuda/texture/common/anim_color.h	/^__global__ void float_to_color( uchar4 *optr, $/;"	f
+float_to_color	cuda/texture/common/anim_color.h	/^__global__ void float_to_color( unsigned char *optr,$/;"	f
+getCudaAttribute	cuda/deviceQuery.cpp	/^inline void getCudaAttribute(T *attribute, CUdevice_attribute device_attribute, int device)$/;"	f
+get_bitmap_ptr	cuda/texture/common/cpu_anim.h	/^  static CPUAnimBitmap** get_bitmap_ptr(void) {$/;"	f	struct:CPUAnimBitmap
+get_ptr	cuda/common/cpu_bitmap.h	/^	unsigned char* get_ptr(void) const { return pixels; }$/;"	f	struct:CPUBitmap
+get_ptr	cuda/raytrace/common/cpu_bitmap.h	/^	unsigned char* get_ptr(void) const { return pixels; }$/;"	f	struct:CPUBitmap
+get_ptr	cuda/texture/common/cpu_anim.h	/^  unsigned char* get_ptr(void) const { return pixels; }$/;"	f	struct:CPUAnimBitmap
+height	cuda/texture/common/cpu_anim.h	/^  int           width, height;$/;"	m	struct:CPUAnimBitmap
+idle_func	cuda/texture/common/cpu_anim.h	/^  static void idle_func(void) {$/;"	f	struct:CPUAnimBitmap
+image_size	cuda/common/cpu_bitmap.h	/^	long image_size(void) const { return x * y * 4; }$/;"	f	struct:CPUBitmap
+image_size	cuda/raytrace/common/cpu_bitmap.h	/^	long image_size(void) const { return x * y * 4; }$/;"	f	struct:CPUBitmap
+image_size	cuda/texture/common/cpu_anim.h	/^  long image_size(void) const { return width * height * 4; }$/;"	f	struct:CPUAnimBitmap
+main	cuda/deviceQuery.cpp	/^main(int argc, char **argv)$/;"	f
+main	mpi/ring.c	/^int main(int argc, char *argv[]) {$/;"	f
+mouse_func	cuda/texture/common/cpu_anim.h	/^  static void mouse_func(	int button, int state,$/;"	f	struct:CPUAnimBitmap
+pArgc	cuda/deviceQuery.cpp	/^int *pArgc = NULL;$/;"	v
+pArgv	cuda/deviceQuery.cpp	/^char **pArgv = NULL;$/;"	v
+pixels	cuda/common/cpu_bitmap.h	/^	unsigned char *pixels;$/;"	m	struct:CPUBitmap
+pixels	cuda/raytrace/common/cpu_bitmap.h	/^	unsigned char *pixels;$/;"	m	struct:CPUBitmap
+pixels	cuda/texture/common/cpu_anim.h	/^  unsigned char *pixels;$/;"	m	struct:CPUAnimBitmap
+swap	cuda/texture/common/anim_color.h	/^void swap( T& a, T& b) {$/;"	f
+value	cuda/texture/common/anim_color.h	/^__device__ unsigned char value( float n1, float n2, int hue ){$/;"	f
+width	cuda/texture/common/cpu_anim.h	/^  int           width, height;$/;"	m	struct:CPUAnimBitmap
+x	cuda/common/cpu_bitmap.h	/^	int           x,y;$/;"	m	struct:CPUBitmap
+x	cuda/raytrace/common/cpu_bitmap.h	/^	int           x,y;$/;"	m	struct:CPUBitmap
+y	cuda/common/cpu_bitmap.h	/^	int           x,y;$/;"	m	struct:CPUBitmap
+y	cuda/raytrace/common/cpu_bitmap.h	/^	int           x,y;$/;"	m	struct:CPUBitmap
+~CPUAnimBitmap	cuda/texture/common/cpu_anim.h	/^  ~CPUAnimBitmap() {$/;"	f	struct:CPUAnimBitmap
+~CPUBitmap	cuda/common/cpu_bitmap.h	/^	~CPUBitmap() {$/;"	f	struct:CPUBitmap
+~CPUBitmap	cuda/raytrace/common/cpu_bitmap.h	/^	~CPUBitmap() {$/;"	f	struct:CPUBitmap
