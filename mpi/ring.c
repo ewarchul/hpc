@@ -11,13 +11,11 @@ int main(int argc, char *argv[]) {
   int worldRank;
   MPI_Comm_rank(MPI_COMM_WORLD, &worldRank);
   if (worldRank != 0) {
-    printf("Waitin...\n");
     MPI_Recv(&token, 1, MPI_INT, worldRank - 1, 0, MPI_COMM_WORLD,
              MPI_STATUS_IGNORE);
-    printf("[AWOKEN] process %d received token %d from process %d\n", worldRank, token,
+    printf("process %d received token %d from process %d\n", worldRank, token,
            worldRank - 1);
   } else {
-    printf("Process 0 is seting the initial value!\n");
     token = 2;
   }
 
@@ -26,8 +24,6 @@ int main(int argc, char *argv[]) {
     MPI_Send(&token, 1, MPI_INT, (worldRank + 1) % worldSize, 0,
              MPI_COMM_WORLD);
   } else {
-    printf("Process 0 is sending first message!\n");
-    sleep(5);
     MPI_Send(&token, 1, MPI_INT, (worldRank + 1) % worldSize, 0,
              MPI_COMM_WORLD);
   }
@@ -35,10 +31,9 @@ int main(int argc, char *argv[]) {
   
 
   if (worldRank == 0) {
-    printf("Process 0 is waiting for the message\n");
     MPI_Recv(&token, 1, MPI_INT, worldSize - 1, 0, MPI_COMM_WORLD,
              MPI_STATUS_IGNORE);
-    printf("[0] process %d received token %d from process %d\n", worldRank,
+    printf("process %d received token %d from process %d\n", worldRank,
            token, worldSize - 1);
   }
 
