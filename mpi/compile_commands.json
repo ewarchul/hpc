@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/ewarchul/Phd/lectures/HPC/src",
+  "command": "/usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -isystem /usr/lib/x86_64-linux-gnu/openmpi/include    -o CMakeFiles/main.dir/mpi_init.c.o   -c /home/ewarchul/Phd/lectures/HPC/src/mpi_init.c",
+  "file": "/home/ewarchul/Phd/lectures/HPC/src/mpi_init.c"
+}
+]
